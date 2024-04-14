@@ -1,0 +1,50 @@
+<html>
+<head>
+  <style>
+  body{
+	background: gray;
+  }
+  button{
+    background-color: yellow;
+  }
+  </style>
+</head>
+<body>
+  <h1>Объекты</h1>
+  <p>Первый способ:</p>
+  <p id = "first"></p>
+  <button id = "b1" onclick="show_first()">Показать всю инфу про первую машину</button>
+  <p id = "sec"></p>
+  <button id = "b2" onclick="show_sec()">Показать всю инфу про вторую машину</button>
+</body>
+</html>
+
+
+
+<script language="javascript">
+var first_car = new Object()
+first_car.model = "BMW"
+first_car.color = "Blue"
+first_car.maxSpeed = 220
+
+var sec_car = new Object()
+sec_car.model = "BMW"
+sec_car.color = "Green"
+sec_car.maxSpeed = 180
+
+function show_first(){
+  document.getElementById('first').innerHTML = "<br> Model: " + first_car.model +
+  "<br> Color: " + first_car.color +
+  "<br> Max Speed: " + first_car.maxSpeed
+  document.getElementById("b1").style.visibility="hidden";
+}
+function show_sec(){
+  document.getElementById('sec').innerHTML = "<br> Model: " + sec_car.model +
+  "<br> Color: " + sec_car.color +
+  "<br> Max Speed: " + sec_car.maxSpeed
+  document.getElementById("b2").style.visibility="hidden";
+}
+</script>
+
+
+
